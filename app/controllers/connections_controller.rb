@@ -16,6 +16,9 @@ class ConnectionsController < ApplicationController
   end
 
 
+  def omniauth_failure
+    redirect_to dashboard_url, notice: 'Something went wrong'
+  end
 
   private
 
