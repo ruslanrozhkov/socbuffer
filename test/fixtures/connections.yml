@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: connections
+#
+#  id          :integer          not null, primary key
+#  provider    :string
+#  oauth_token :string
+#  secret      :string
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  provider: MyString
+  oauth_token: MyString
+  secret: MyString
+  user_id: 1
+
+two:
+  provider: MyString
+  oauth_token: MyString
+  secret: MyString
+  user_id: 1
