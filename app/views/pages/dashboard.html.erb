@@ -16,6 +16,13 @@
           <%= link_to 'Connect with Twitter', '/auth/twitter', class: 'btn btn-info btn-block btn-sm', disabled: true %>
           <%= link_to 'Disconnect Twitter', connection_path(current_user.connections.where(provider: 'twitter').first), method: :delete %>
       <% end %>
+
+      <% unless current_user.connections.where(provider: 'facebook').any? %>
+          <%= link_to 'Connect with Facebook', '/auth/facebook', class: 'btn btn-primary btn-block btn-sm' %>
+      <% else %>
+          <%= link_to 'Connect with Facebook', '/auth/facebook', class: 'btn btn-primary btn-block btn-sm', disabled: true %>
+          <%= link_to 'Disconnect Facebook', connection_path(current_user.connections.where(provider: 'facebook').first), method: :delete %>
+      <% end %>
     </div>
   </div>
 
