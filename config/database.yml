@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
+  host: localhost
+
+development:
+  <<: *default
+  database: development_scraper
+
+test:
+  <<: *default
+  database: test_scraper
+
+production:
+  <<: *default
+database: production_scraper
