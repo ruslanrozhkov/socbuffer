@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: development_scraper
+  database: development_socbuffer
 
 test:
   <<: *default
-  database: test_scraper
+  database: test_socbuffer
 
 production:
   <<: *default
-database: production_scraper
+database: production_socbuffer
