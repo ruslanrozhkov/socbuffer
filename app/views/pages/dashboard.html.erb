@@ -1,0 +1,30 @@
+<div class="row">
+
+  <!-- Profile and Connections -->
+  <div class="col-md-2 text-center">
+    <%= image_tag 'logo.jpeg', class: 'logo' %>
+    <hr>
+    <div class="timezone">
+      <p class="text-center"><b><%= Time.zone.name %> Timezone</b></p>
+      <%= link_to 'change', edit_user_registration_path %>
+    </div>
+    <hr>
+    <div class="social">
+    </div>
+  </div>
+
+  <!-- New post and Scheduled -->
+
+  <div class="col-md-5">
+    <h3 class="text-center">Scheduled Posts</h3>
+    <hr>
+  </div>
+
+
+  <!-- History -->
+
+  <div class="col-md-5">
+    <h3 class="text-center">Post History</h3>
+    <hr>
+  </div>
+</div>
