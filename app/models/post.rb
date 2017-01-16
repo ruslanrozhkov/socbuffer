@@ -33,11 +33,13 @@ class Post < ApplicationRecord
 
   def display
     begin
-      if facebook == true
-        to_facebook
-      end
-      if twitter == true
-        to_twitter
+      unless state == 'canceled'
+        if facebook == true
+          to_facebook
+        end
+        if twitter == true
+          to_twitter
+        end
       end
       self.update_attributes(state: 'posted')
     rescue Exception => e
